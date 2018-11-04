@@ -248,16 +248,16 @@ namespace MonoGamePlayground.Pathfinding
             // add the nodes
             for (var y = 1; y < _map.GetLength(1) - 1; y++)
                 for (var x = 1; x < _map.GetLength(0) - 1; x++)
-                    if (_map[x, y] == 0)
+                    if (_map[x, y] == 1)
                     {
-                        if (_map[x - 1, y] == 1 || _map[x, y - 1] == 1 || _map[x - 1, y - 1] == 1)
-                            _nodeList.Add(new Node(new Vector2(x * 10, y * 10)));
-                        if (_map[x, y - 1] == 1 || _map[x + 1, y - 1] == 1 || _map[x + 1, y] == 1)
-                            _nodeList.Add(new Node(new Vector2(x * 10 + 10, y * 10)));
-                        if (_map[x - 1, y] == 1 || _map[x - 1, y + 1] == 1 || _map[x, y + 1] == 1)
-                            _nodeList.Add(new Node(new Vector2(x * 10, y * 10 + 10)));
-                        if (_map[x + 1, y] == 1 || _map[x + 1, y + 1] == 1 || _map[x, y + 1] == 1)
-                            _nodeList.Add(new Node(new Vector2(x * 10 + 10, y * 10 + 10)));
+                        if (_map[x - 1, y] == 0 && _map[x, y - 1] == 0 && _map[x - 1, y - 1] == 0)
+                            _nodeList.Add(new Node(new Vector2(x * 10 - 1, y * 10 - 1)));
+                        if (_map[x, y - 1] == 0 && _map[x + 1, y - 1] == 0 && _map[x + 1, y] == 0)
+                            _nodeList.Add(new Node(new Vector2(x * 10 + 11, y * 10 - 1)));
+                        if (_map[x - 1, y] == 0 && _map[x - 1, y + 1] == 0 && _map[x, y + 1] == 0)
+                            _nodeList.Add(new Node(new Vector2(x * 10 - 1, y * 10 + 11)));
+                        if (_map[x + 1, y] == 0 && _map[x + 1, y + 1] == 0 && _map[x, y + 1] == 0)
+                            _nodeList.Add(new Node(new Vector2(x * 10 + 11, y * 10 + 11)));
                     }
 
             _playerNode.Connections.Clear();
