@@ -19,6 +19,7 @@ using MonoGamePlayground.ReinforcementLearning;
 using MonoGamePlayground.SpriteShadow;
 using MonoGamePlayground.InverseKinematics;
 using MonoGamePlayground.MandelbrotShader;
+using MonoGamePlayground.Pathfinding;
 using MonoGamePlayground.SpriteShadowShader;
 using MonoGamePlayground.UIShadowShader;
 

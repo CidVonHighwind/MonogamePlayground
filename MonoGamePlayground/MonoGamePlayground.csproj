@@ -62,6 +62,8 @@
     <Compile Include="MatrixCam\CameraNew.cs" />
     <Compile Include="MatrixCam\MatrixCamGame.cs" />
     <Compile Include="PaletteConverter\PaletteConverterGame.cs" />
+    <Compile Include="Pathfinding\Edge.cs" />
+    <Compile Include="Pathfinding\Node.cs" />
     <Compile Include="Pathfinding\PathfindingGame.cs" />
     <Compile Include="PhysicsTest\Circle.cs" />
     <Compile Include="PhysicsTest\PhysicsTestGame.cs" />
